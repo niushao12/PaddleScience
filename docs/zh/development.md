@@ -19,7 +19,7 @@ PaddleScience 相关的论文复现、API 开发任务开始之前需提交 RFC 
 3. 安装必要的依赖包
 
     ``` sh
-    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+    python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
     ```
 
 4. 基于当前所在的 `develop` 分支，新建一个分支(假设新分支名字为 `dev_model`)
@@ -51,7 +51,7 @@ PaddleScience 相关的论文复现、API 开发任务开始之前需提交 RFC 
     因此在 commit 您的代码之前，请务必先在 `PaddleScience/` 目录下执行以下命令安装 `pre-commit`，否则提交的 PR 会被 code-style 检测到代码未格式化而无法合入。
 
     ``` sh
-    pip install pre-commit
+    python -m pip install pre-commit
     pre-commit install
     ```
 
@@ -291,7 +291,7 @@ equation = {..., "newpde": new_pde}
 
 ### 2.5 构建几何模块[可选]
 
-模型训练、验证时所用的输入、标签数据的来源，根据具体案例场景的不同而变化。大部分基于 PINN 的案例，其数据来自几何形状内部、表面采样得到的坐标点、法向量、SDF 值；而基于数据驱动的方法，其输入、标签数据大多数来自于外部文件，或通过 numpy 等第三方库构造的存放在内存中的数据。本章节主要对第一种情况所需的几何模块进行介绍，第二种情况则不一定需要几何模块，其构造方式可以参考 [#2.6 构建约束条件](#2.6)。
+模型训练、验证时所用的输入、标签数据的来源，根据具体案例场景的不同而变化。大部分基于 PINN 的案例，其数据来自几何形状内部、表面采样得到的坐标点、法向量、SDF 值；而基于数据驱动的方法，其输入、标签数据大多数来自于外部文件，或通过 numpy 等第三方库构造的存放在内存中的数据。本章节主要对第一种情况所需的几何模块进行介绍，第二种情况则不一定需要几何模块，其构造方式可以参考 [#2.6 构建约束条件](#26)。
 
 #### 2.5.1 构建已有几何
 
@@ -896,7 +896,7 @@ solver.visualize()
 文档撰写过程中需进行即时渲染，预览文档内容以检查撰写的内容是否有误。因此需要按照如下命令，安装 mkdocs 相关依赖包。
 
 ``` sh
-pip install -r docs/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+python -m pip install -r docs/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 ### 3.2 撰写文档内容
